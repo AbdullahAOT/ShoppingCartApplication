@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoppingCartApplication
 {
-    // ShoppingCartApplication/ShoppingCart.cs
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
