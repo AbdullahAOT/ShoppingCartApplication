@@ -13,29 +13,25 @@ namespace ShoppingCartApplication
         private static string[] clothingNames = { "Shirt", "Pants", "Jacket" };
         private static string[] electronicNames = { "Phone", "Laptop", "Tablet" };
 
-        public static Product GenerateProduct()
+        public static Product GenerateFoodProduct()
         {
-            var category = (ProductCategory)random.Next(0, 3);
-            string name = "";
-            decimal price = 0;
+            string name = foodNames[random.Next(foodNames.Length)];
+            decimal price = (decimal)(random.NextDouble() * 10 + 1);
+            return new Product(name, price, ProductCategory.Food);
+        }
 
-            switch (category)
-            {
-                case ProductCategory.Food:
-                    name = foodNames[random.Next(foodNames.Length)];
-                    price = (decimal)(random.NextDouble() * 10 + 1);
-                    break;
-                case ProductCategory.Clothing:
-                    name = clothingNames[random.Next(clothingNames.Length)];
-                    price = (decimal)(random.NextDouble() * 50 + 10);
-                    break;
-                case ProductCategory.Electronics:
-                    name = electronicNames[random.Next(electronicNames.Length)];
-                    price = (decimal)(random.NextDouble() * 200 + 50);
-                    break;
-            }
+        public static Product GenerateClothingProduct()
+        {
+            string name = clothingNames[random.Next(clothingNames.Length)];
+            decimal price = (decimal)(random.NextDouble() * 50 + 10);
+            return new Product(name, price, ProductCategory.Clothing);
+        }
 
-            return new Product(name, price, category);
+        public static Product GenerateElectronicProduct()
+        {
+            string name = electronicNames[random.Next(electronicNames.Length)];
+            decimal price = (decimal)(random.NextDouble() * 200 + 50);
+            return new Product(name, price, ProductCategory.Electronics);
         }
     }
 }
