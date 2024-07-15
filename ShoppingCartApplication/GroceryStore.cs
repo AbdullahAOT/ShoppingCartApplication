@@ -13,11 +13,11 @@ namespace ShoppingCartApplication
         public GroceryStore()
         {
             products = new List<Product>
-        {
-            ProductGenerator.GenerateProduct(),
-            ProductGenerator.GenerateProduct(),
-            ProductGenerator.GenerateProduct()
-        };
+            {
+                ProductGenerator.GenerateFoodProduct(),
+                ProductGenerator.GenerateFoodProduct(),
+                ProductGenerator.GenerateFoodProduct()
+            };
         }
 
         public List<Product> GetAvailableProducts()
