@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShoppingCartApplication
 {
-    // ShoppingCartApplication/Product.cs
+    
     using System;
 
     public enum ProductCategory
